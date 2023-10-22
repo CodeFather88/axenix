@@ -15,6 +15,7 @@ import forklift_routes from "./routes/forklift.js"
 import point_routes from "./routes/point.js"
 import product_routes from "./routes/product.js"
 import tracking_routes from "./routes/tracking.js"
+import handlers_routes from "./routes/handlers.js"
 
 
 
@@ -50,6 +51,7 @@ fastify.register(point_routes, {prefix: '/api/points'})
 fastify.register(product_routes, {prefix: '/api/products'})
 fastify.register(forklift_routes, {prefix: '/api/forklifts'})
 fastify.register(tracking_routes, {prefix: '/api/tracking'})
+fastify.register(handlers_routes, {prefix: '/api/handlers'}) // запросы с forklift_control
 
 fastify.listen({ port: process.env.PORT })
 
