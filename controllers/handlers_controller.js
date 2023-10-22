@@ -9,11 +9,6 @@ export const handle = async (req, res) => {
     let handler_type = req.body.handler_type
     let handler_entity = req.body.handler_entity
 
-    switch (handler_type){
-        case 'started the task':
-
-    }
-
     if (handler_type == 'started the task'){
         forklifts.updateOne({where: {id: forklift_id, warehouse_id: warehouse_id}}, {
             task_id: handler_entity,
