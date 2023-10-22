@@ -1,0 +1,56 @@
+Склады
+
+warehouses
+    warehouse_id
+    name
+    created_at
+    forklifts
+    endpoints
+    tasks
+    points
+    
+
+points
+    point_id
+    name
+    forklift_id
+    warehouse_id
+
+endpoints
+    id
+    name
+    row
+    warehouse_id
+
+tasks
+    task_id
+    product_id
+    endpoint
+    start_time
+    end_time
+    status // wait / started / finished 
+
+products
+    id
+    name
+
+forklifts
+    id
+    name
+    task_id
+    maintenance_date
+    position
+    status // wait / started / finished 
+
+
+
+
+___________
+
+logs
+    id
+    time
+    event
+    
+
+    
